@@ -1,0 +1,46 @@
+{
+    "hi": {
+        "text": "Hey! Need help building a lineup?"
+    },
+    "not_sure": {
+        "text": "Not sure what you mean. Use the */help* command for more information."
+    },
+    "set_success": {
+        "text": "You have successfully created the queue."
+    },
+    "set_error": {
+        "text": "Something went wrong."
+    },
+    "cancel_success": {
+        "text": "You have successfully deleted the queue."
+    },
+    "cancel_error": {
+        "text": "Something went wrong."
+    },
+    "next_success": {
+        "text": "{name} is up next!"
+    },
+    "next_error": {
+        "text": "There is nothing left to call."
+    },
+    "/help": {
+        "/set": {
+            "name": "/set",
+            "synopsis": "Sets up the queue. Both the 'items' and 'phrases' must be comma separated lists. e.g. `/set -c --items metallica, black sabbath, guns and roses --phrases metal band, rock band`",
+            "usage": "/set [-c] --items [,] --phrases [,]",
+            "options": {
+                "c": "(optional) Uses a circular (rotating) queue. If you want items to be deleted when called, do not set c."
+            }
+        },
+        "/cancel": {
+            "name": "/cancel", 
+            "synopsis": "Cancels the existing queue.",
+            "usage": "/cancel"
+        },
+        "/next": {
+            "name": "/next",
+            "synopsis": "Calls the next thing in the queue.",
+            "usage": "/next"
+        }
+    }
+}
