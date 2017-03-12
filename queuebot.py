@@ -5,8 +5,6 @@ import commands
 from slackclient import SlackClient
 from collections import deque
 
-# Name of the bot
-BOT_NAME = 'queuebot'
 # Instantiate the Slack client
 slack_client = SlackClient(os.environ.get('SLACK_BOT_API_KEY'))
 
@@ -28,7 +26,7 @@ class Bot:
 
         if slack_users['ok']:
             for user in slack_users['members']:
-                if 'name' in user and user.get('name') == BOT_NAME:
+                if 'name' in user and user.get('name') == constants.BOT_NAME:
                     self.id = user.get('id')
                 elif 'presence' in user and user.get('presence') == 'active':
                     self.users.append(user.get('name'))
